@@ -1,0 +1,8 @@
+{
+  "home": "HomeComponent",
+  "count-down-io": "CountDownTimerIOComponent",
+  "count-down-subject": "CountDownTimerSubjectComponent",
+  "infinite-scroll": "InfiniteScrollComponent",
+  "products": "ProductListComponent",
+  "students": "StudentListComponent"
+}

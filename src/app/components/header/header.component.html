@@ -1,0 +1,24 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink routerLink="/home">Floating Banner</a>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink routerLink="/core/products">Products list</a>
+  </li>
+  <li [ngbNavItem]="3">
+    <a ngbNavLink routerLink="/core/count-down-io">Count down timer I/O</a>
+  </li>
+  <li [ngbNavItem]="4">
+    <a ngbNavLink routerLink="/core/count-down-subject"
+      >Count down timer subject</a
+    >
+  </li>
+  <li [ngbNavItem]="5">
+    <a ngbNavLink routerLink="/core/students">Students list</a>
+  </li>
+  <li [ngbNavItem]="6">
+    <a ngbNavLink routerLink="/core/infinite-scroll">Infinite scroll</a>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>

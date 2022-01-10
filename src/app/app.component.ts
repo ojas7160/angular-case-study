@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
         });
       }
     }
+    this.routes.push({ path: '', pathMatch: 'full', redirectTo: 'home' });
     this.router.resetConfig(this.routes);
   }
 }

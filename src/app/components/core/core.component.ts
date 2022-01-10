@@ -30,6 +30,6 @@ export class CoreComponent implements OnInit {
     //     component: this.components[component],
     //   });
     // }
-    this.router.resetConfig(this.routes);
+    // this.router.resetConfig(this.routes);
   }
 }

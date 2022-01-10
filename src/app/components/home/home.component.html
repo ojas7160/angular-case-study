@@ -1,3 +1,42 @@
-<p>home works!</p>
-<button (click)="addBanner()">banner</button>
-<a href="" *ngIf="showBanner" (click)="openBanner($event)">Go</a>
+<section class="text-center">
+  <h2>Route 1: Floating banner with text</h2>
+
+  <!-- <ngb-carousel
+    #carousel
+    [interval]="100000"
+    [pauseOnHover]="pauseOnHover"
+    [pauseOnFocus]="pauseOnFocus"
+    [showNavigationArrows]="false"
+    [showNavigationIndicators]="false"
+    (slide)="onSlide($event)"
+  >
+    <ng-template ngbSlide *ngFor="let img of images; index as i">
+      <div class="carousel-caption">
+        <h3>My slide {{ i + 1 }} title</h3>
+      </div>
+      <a
+        href="https://www.google.fr/?q=Number+{{ i + 1 }}"
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+      >
+        
+      </a>
+    </ng-template>
+  </ngb-carousel> -->
+
+  <ngb-carousel
+    *ngIf="images"
+    [showNavigationArrows]="false"
+    [showNavigationIndicators]="false"
+  >
+    <ng-template ngbSlide *ngFor="let image of images; let i = index">
+      <div class="picsum-img-wrapper">
+        <img [src]="image" alt="My image {{ i + 1 }} description" />
+      </div>
+      <div class="carousel-caption">
+        <h3>My slide {{ i + 1 }} title</h3>
+        <p>Floating banner text.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</section>

@@ -1,0 +1,48 @@
+section .page-header {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.page-header a {
+  text-decoration: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.page-header {
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+.mr-15 {
+  margin-right: 15px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.text-capitilize {
+  text-transform: capitalize;
+}
+.product-div-style {
+  /* margin: auto; */
+  background-color: rgb(55 175 164);
+  text-align: center;
+  /* vertical-align: middle; */
+  align-items: center;
+  padding: 120px 80px;
+  justify-content: center;
+  margin: 5px;
+  box-shadow: 0px 0px 3px 2px #0000004f;
+}
+
+section .row {
+  margin: 20px 30px;
+  justify-content: center;
+}
+
+.w-24 {
+  width: 24% !important;
+}
+.w-49 {
+  width: 49% !important;
+}

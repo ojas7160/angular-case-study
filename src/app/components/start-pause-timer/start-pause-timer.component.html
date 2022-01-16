@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="form-group d-flex mb-15">
+      <label for="time">Enter Timer Limit:</label>
+      <input
+        class="form-control"
+        type="text"
+        placeholder="Enter only number"
+        [(ngModel)]="timeCount"
+      />
+    </div>
+    <div>
+      <button class="btn btn-primary m-2" (click)="startPause()">
+        Start/Pause
+      </button>
+      <button class="btn btn-primary" (click)="reset()">Reset</button>
+    </div>
+    <div class="log">
+      <p *ngFor="let log of logs">Paused at: {{ log.time }}</p>
+    </div>
+  </div>
+</div>

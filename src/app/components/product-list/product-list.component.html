@@ -1,1 +1,37 @@
-<p>product-list works!</p>
+<section>
+  <div class="page-header d-flex">
+    <div class="mr-15">
+      <a href="javascript:void(0)" (click)="grid = true"> Grid View </a>
+    </div>
+    <div class="mr-15">
+      <a href="javascript:void(0)" (click)="grid = false"> List View </a>
+    </div>
+    <div class="form-group d-flex mr-15">
+      <select
+        class="form-control"
+        id="select-price"
+        [(ngModel)]="selectedPrice"
+        (ngModelChange)="priceFilter(selectedPrice)"
+      >
+        <option value="null" disabled>Select Price</option>
+        <option
+          class="text-capitilize"
+          *ngFor="let price of prices"
+          [value]="price.id"
+        >
+          {{ price.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div
+      *ngFor="let item of items; let i = index"
+      class="product-div-style"
+      [ngClass]="grid ? 'col-md-3 w-24' : 'col-md-6 w-49'"
+    >
+      {{ item }}
+    </div>
+  </div>
+</section>

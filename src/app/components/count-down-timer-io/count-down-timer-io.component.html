@@ -1,1 +1,35 @@
-<p>count-down-timer-io works!</p>
+<section *ngIf="route == 'subject'; else io">
+  <div class="row">
+    <div class="col-md-4 timer">
+      <app-timer [route]="route"></app-timer>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-7 start-pause">
+      <app-start-pause-timer [route]="route"></app-start-pause-timer>
+    </div>
+  </div>
+  <div class="row">
+    <app-log-timer [route]="route"></app-log-timer>
+  </div>
+</section>
+
+<ng-template #io>
+  <section>
+    <div class="row">
+      <div class="col-md-4 timer">
+        <app-timer [timeCount]="timeCount"></app-timer>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-7 start-pause">
+        <app-start-pause-timer
+          (timeAction)="setTimeAction($event)"
+          [resetAll]="timeCount"
+          (resetEmitter)="reset($event)"
+        ></app-start-pause-timer>
+      </div>
+    </div>
+    <div class="row">
+      <app-log-timer [logs]="logs"></app-log-timer>
+    </div>
+  </section>
+</ng-template>

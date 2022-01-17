@@ -25,9 +25,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('carousel', { static: true }) carousel: any;
   constructor(private router: Router) {}
 
-  ngOnInit(): void {
-    console.log('here');
-  }
+  ngOnInit(): void {}
 
   togglePaused() {
     if (this.paused) {

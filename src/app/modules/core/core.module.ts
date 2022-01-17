@@ -8,6 +8,9 @@ import { StartPauseTimerComponent } from 'src/app/components/start-pause-timer/s
 import { LogTimerComponent } from 'src/app/components/log-timer/log-timer.component';
 import { CountDownTimerIOComponent } from 'src/app/components/count-down-timer-io/count-down-timer-io.component';
 import { CountDownTimerSubjectComponent } from 'src/app/components/count-down-timer-subject/count-down-timer-subject.component';
+import { StudentListComponent } from 'src/app/components/student-list/student-list.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { InfiniteScrollComponent } from 'src/app/components/infinite-scroll/infinite-scroll.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { CountDownTimerSubjectComponent } from 'src/app/components/count-down-ti
     LogTimerComponent,
     CountDownTimerIOComponent,
     CountDownTimerSubjectComponent,
+    StudentListComponent,
+    InfiniteScrollComponent,
   ],
-  imports: [CommonModule, CoreRoutingModule, FormsModule],
+  imports: [CommonModule, CoreRoutingModule, FormsModule, InfiniteScrollModule],
 })
 export class CoreModule {}

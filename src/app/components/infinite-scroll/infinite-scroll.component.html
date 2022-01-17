@@ -1,1 +1,14 @@
-<p>infinite-scroll works!</p>
+<div
+  class="infinite-scroll"
+  infiniteScroll
+  [infiniteScrollDistance]="1"
+  [infiniteScrollThrottle]="300"
+  (scrolled)="onScroll()"
+>
+  <div *ngFor="let div of divs" class="card-div">
+    <p>List Item : {{ div }}</p>
+    <button class="btn btn-primary" (click)="divClicked(div)">
+      Button {{ div }}
+    </button>
+  </div>
+</div>
